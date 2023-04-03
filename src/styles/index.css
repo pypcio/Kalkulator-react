@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to right, #646cff, #3bb3af);
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+}

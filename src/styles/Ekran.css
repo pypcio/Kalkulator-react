@@ -1,0 +1,21 @@
+#ekran {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: rgb(52, 52, 52);
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 0.2rem;
+}
+.output {
+  font-size: 1rem;
+  color: rgba(183, 182, 182, 0.85);
+  margin: 2px 2px 2px 0px;
+}
+.input {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.881);
+  margin: 2px 2px 2px 0px;
+}
