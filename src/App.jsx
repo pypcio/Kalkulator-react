@@ -26,42 +26,45 @@ function App() {
   const handleWynik = (znak) => {
     const isOperation = wynik.charAt(wynik.length - 1).match(operandReg);
     isOperation !== null
-      ? Operation(isOperation[0])
+      ? Operation(isOperation[0], znak)
       : (setWynik(ekran + znak), setEkran("0"));
     // console.log("ekran", wynik);
   };
 
-  const Operation = (znak) => {
-    if (znak === "+") {
-      add();
-    } else if (znak === "-") {
-      subt();
-    } else if (znak === "*") {
-      multi();
-    } else if (znak === "÷") {
-      div();
+  const Operation = (staryZnak, nowyZnak) => {
+    if (staryZnak === "+") {
+      add(nowyZnak);
+    } else if (staryZnak === "-") {
+      subt(nowyZnak);
+    } else if (staryZnak === "*") {
+      multi(nowyZnak);
+    } else if (staryZnak === "÷") {
+      div(nowyZnak);
     }
   };
 
-  const add = () => {
+  const add = (nowyZnak) => {
     const tempAdd = parseFloat(ekran) + parseFloat(wynik);
-    setEkran(tempAdd);
+    setWynik(tempAdd + nowyZnak);
+    setEkran("0");
   };
-  const subt = () => {
+  const subt = (nowyZnak) => {
     const tempSubt = Math.floor(parseFloat(wynik) - parseFloat(ekran));
-    setEkran(tempSubt);
+    setWynik(tempSubt + nowyZnak);
+    setEkran("0");
   };
-  const multi = () => {
+  const multi = (nowyZnak) => {
     const tempMulti = Math.floor(parseFloat(ekran) * parseFloat(wynik));
-    setEkran(tempMulti);
+    setWynik(tempMulti + nowyZnak);
+    setEkran("0");
   };
-  const div = () => {
+  const div = (nowyZnak) => {
     let tempDiv = 0;
     if (ekran !== "0") {
       tempDiv = parseFloat(wynik) / parseFloat(ekran);
       Number.isInteger(tempDiv)
-        ? setEkran(tempDiv)
-        : setEkran(tempDiv.toFixed(4));
+        ? (setEkran("0"), setWynik(tempDiv + nowyZnak))
+        : (setEkran("0"), setWynik(tempDiv.toFixed(4) + nowyZnak));
     } else {
       setEkran("0");
     }
