@@ -3,10 +3,12 @@ import "../styles/Klawiatura.css";
 function Klawiatura({ przycisk }) {
   return (
     <div id="kl-1">
-      <button id="AC" className="span-two">
+      <button id="AC" className="span-two" onClick={przycisk}>
         AC
       </button>
-      <button id="DEL">DEL</button>
+      <button id="DEL" onClick={przycisk}>
+        DEL
+      </button>
       <button onClick={przycisk}>÷</button>
       <button onClick={przycisk}>1</button>
       <button onClick={przycisk}>2</button>
