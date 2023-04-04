@@ -19,3 +19,10 @@ button:hover {
 .span-two {
   grid-column: span 2;
 }
+.special {
+  background-color: #ff6c00;
+}
+button.special:hover {
+  transform: scale(1.01);
+  background-color: #d95c00;
+}

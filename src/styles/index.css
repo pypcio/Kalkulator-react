@@ -4,11 +4,30 @@
   box-sizing: border-box;
 }
 :root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: linear-gradient(to right, #646cff, #3bb3af);
+  /* background: linear-gradient(to right, #8c2f5e, #aa4139); */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
 }
 body {
   margin: 0;
   display: flex;
   place-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
