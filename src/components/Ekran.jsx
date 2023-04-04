@@ -1,13 +1,11 @@
 import React from "react";
 import "../styles/Ekran.css";
-function czytaj(event) {
-  console.log(event.target.id);
-}
-function Ekran({ obraz }) {
+
+function Ekran({ obrazDane, obrazWynik }) {
   return (
     <div id="ekran">
-      <p className="output ">{obraz}</p>
-      <p className="input ">{obraz}</p>
+      <p className="output ">{obrazWynik}</p>
+      <p className="input ">{obrazDane}</p>
     </div>
   );
 }

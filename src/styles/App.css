@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.cal-1 {
+  /* border: 2px solid rgba(145, 140, 140, 0.1); */
+  background-color: rgb(71, 208, 133);
+  margin-top: 5rem;
+  display: grid;
+  margin-top: 2px;
+  grid-template-columns: repeat(1, 12rem);
+  grid-template-rows: minmax(3rem, auto) minmax(1rem, auto);
+  border: none;
+}
